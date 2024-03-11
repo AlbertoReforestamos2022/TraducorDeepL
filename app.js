@@ -1,13 +1,15 @@
+require('dotenv').config();
+
 const express = require("express");
 const cors = require("cors");
 const app = express();
 const bodyParser = require("body-parser");
 
-const port = 9000;
+const port = process.env.PORT || 7000;
 
 // DeepL API 
 const deepl = require('deepl-node')
-const authKey = "10b047b0-b79e-9d5f-63b3-7e4291a3cc92:fx"; // Replace with your key
+const authKey = process.env.KEY; // Replace with your key  
 const translator = new deepl.Translator(authKey);
 
 
