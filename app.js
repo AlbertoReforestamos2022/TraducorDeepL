@@ -51,6 +51,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // });
 
+app.get("/", (req, res) => {
+    res.send("Raíz herramienta DeepL");
+  });
+
 // Notas de blog 
 app.post('/notas-blog', (req, res) => {
     console.log(req.body);
